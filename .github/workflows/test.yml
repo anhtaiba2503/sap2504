@@ -13,5 +13,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Build with Maven
-      run: mvn clean package -DskipTests
+    - name: |
+          cd HelloWorld/HelloWorld
+          mvn clean package -DskipTests
