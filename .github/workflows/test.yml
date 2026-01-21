@@ -17,3 +17,5 @@ jobs:
       run: |
           cd HelloWorld/HelloWorld
           mvn clean package -DskipTests
+    - name: Build image
+      run: docker build -t tritran/javaapp:1.2 .
