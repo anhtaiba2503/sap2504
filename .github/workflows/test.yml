@@ -13,9 +13,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: 
+    - name: Build HelloWorld with Maven
       run: |
           cd HelloWorld/HelloWorld
           mvn clean package -DskipTests
     - name: Build image
-      run: docker build -t tritran/javaapp:1.2 .
+      run: |
+        cd HelloWorld/HelloWorld
+        docker build -t tritran/javaapp:1.2 .
