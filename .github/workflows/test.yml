@@ -26,6 +26,7 @@ jobs:
 
     - name: Build image DK
       run: |
+        cd HelloWorld/HelloWorld
         COMMIT_ID=$(git rev-parse --short HEAD)
         docker build -t tritran95/javaapp:$COMMIT_ID .
 
