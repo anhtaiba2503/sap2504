@@ -10,7 +10,7 @@ env:
 
 jobs:
   build-and-push:
-    runs-on: self-hosted   # chạy trên docker@docker
+    runs-on: self-hosted  
 
     steps:
       - name: Checkout source
