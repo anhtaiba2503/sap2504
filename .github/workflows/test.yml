@@ -23,7 +23,9 @@ jobs:
           java-version: '17'
 
       - name: Build Java app
-        run: mvn clean package -DskipTests
+        run: |
+          cd HelloWorld/HelloWorld
+          mvn clean package -DskipTests
 
       - name: Login DockerHub
         uses: docker/login-action@v3
