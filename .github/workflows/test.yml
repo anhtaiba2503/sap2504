@@ -37,6 +37,8 @@ jobs:
         run: |
           IMAGE=${{ env.IMAGE_NAME }}
           TAG=${GITHUB_SHA::7}
+          
+          cd HelloWorld/HelloWorld
 
           docker build -t $IMAGE:$TAG .
           docker tag $IMAGE:$TAG $IMAGE:latest
